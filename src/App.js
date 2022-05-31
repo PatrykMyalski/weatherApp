@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./componets/header/Header";
+import Meme from "./componets/meme/Meme";
+import classes from './app.module.css';
+import { Fragment } from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      <div className={classes.container}>
+        <Meme />
+
+        
+      </div>
+    </Fragment>
   );
 }
 
 export default App;
+// container ma określoną szerokość, szerokość w komponentach w nim 
+// określać w %

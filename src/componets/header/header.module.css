@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    height: 100%;
+    background-color: #809FFF;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.icon {
+    font-size: 2rem
+}
+.textInput {
+    all:unset;
+    margin-left: 2rem;
+    font-size: 2rem;
+    width: 20rem;
+    padding: 0.75rem;
+    border-radius: 1.25rem;
+    background-color: #BFCFFF;
+    
+}
+.search {
+    all:unset;
+    cursor: pointer;
+    margin-left: 1rem;
+    
+    padding: 0 0.75rem;
+}
+
