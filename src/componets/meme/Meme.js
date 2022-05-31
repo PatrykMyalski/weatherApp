@@ -1,14 +1,15 @@
 import meme from "../../assets/memes/meme.png"
 import classes from './meme.module.css'
 import weatherIcon from '../../assets/weather icons/day/113.png'
-import windIcon from '../../assets/icons/wind-icon.png'
+import { click } from "@testing-library/user-event/dist/click";
 
-const Meme = () => {
+const Meme = (props) => {
+
 
 
     return (
     <div className={classes.container}>
-        <p>Click meme for more weather information</p>
+        <button type="button"  className={classes.showWeather} onClick={props.onOpenClick}>Click for more weather information</button>
         <div className={classes.meme}>
             <img src={meme} alt='frozed guy'></img>
         </div>

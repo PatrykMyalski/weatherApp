@@ -1,0 +1,21 @@
+.container {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.hide {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    width: 5rem;
+    background-color: #809FFF;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 50ms;
+}
+
+.hide:hover {
+    background-color: #0000FF;
+}

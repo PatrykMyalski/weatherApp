@@ -1,37 +1,61 @@
+/* primary #0000FF
+    secondary #809FFF
+    dark #002DB3
+    bright #BFCFFF
+    white white */
+
 .container {
-    padding-top: 4rem;
+    padding-top: 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.showWeather {
+    all: unset;
+    cursor: pointer;
+    background-color: #809FFF;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: 50ms;
+}
+
+.showWeather:hover {
+    background-color: #0000FF;
+}
+
 .meme {
-    
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .meme img {
     width: 80%;
-    cursor: pointer;
     border-radius: 1rem;
 }
+
 .weather {
     width: 100%;
     margin: 4rem 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+    gap: 1rem;
 }
+
 .weather img {
     width: 64px;
     height: 64px;
 }
-.weather h2 {
-    margin: 0 2rem;
 
-    
+@media screen and (max-width: 700px) {
+    .weather h2 {
+        text-align: center;
+        width: 100%;
+        font-size: 1rem;
+    }
 }
-
