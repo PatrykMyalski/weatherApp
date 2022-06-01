@@ -3,23 +3,25 @@ import Meme from "./componets/meme/Meme";
 import Weather from "./componets/weather/Weather";
 import classes from './app.module.css';
 import { Fragment, useState } from "react";
+import WeatherContext from "./data/weather-data-holder";
 
 function App() {
+  const [weatherData, setWeatherData] = useState(null)
   const [showWeather, setShowWeather] = useState(false);
   const weatherHandler = () => {
     setShowWeather(!showWeather);
   };
+  const requestHandler = data => {
+    setWeatherData(data);
+  };
 
   return (
-    <Fragment>
-      <Header />
+    <WeatherContext.Provider value={{data: weatherData}}>
+      <Header onWeatherRequest={requestHandler}/>
       <div className={classes.container}>
-        
-        {showWeather ? <Weather onHideClick={weatherHandler} /> : <Meme onOpenClick={weatherHandler}/>}
-
-        
+        {showWeather ? <Weather onHideClick={weatherHandler} /> : <Meme onOpenClick={weatherHandler}/>}  
       </div>
-    </Fragment>
+    </WeatherContext.Provider>
   );
 };
 

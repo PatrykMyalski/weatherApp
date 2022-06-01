@@ -11,3 +11,9 @@ const Weather = (props) => {
 };
 
 export default Weather;
+
+
+        // city, country
+// icon, cloud %,uv ,condition,temp_c ,feelslike, humidity, 
+// opady mm, ciśnienie, wind speed, wind direction, air quality check this
+// last upadated
