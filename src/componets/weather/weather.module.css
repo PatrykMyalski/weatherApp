@@ -3,19 +3,47 @@
     display: flex;
     flex-direction: column;
 }
-.hide {
+.btn_container {
+    margin: 0 auto;
+}
+.btn {
     all: unset;
     cursor: pointer;
     text-align: center;
-    margin: 0 auto;
-    width: 5rem;
+    margin: 1rem;
+    width: auto;
     background-color: #809FFF;
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 1rem;
     transition: 50ms;
 }
+.btn:hover {
+    background-color: #0000FF;
+    color: white;
+}
 
 .hide:hover {
     background-color: #0000FF;
+}
+
+.baseInformation {
+    margin-top: 2rem;
+    text-align: center;
+}
+.moreData{
+    margin-top: 2rem;
+}
+
+.moreData, .moreData div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.temp p, .clouds p, .rain p, .astro p {
+    text-align: center;
+    width: 100%;
 }

@@ -1,0 +1,24 @@
+.container {
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.close {
+    all: unset;
+    cursor: pointer;
+    background-color: #809FFF;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 50ms;
+}
+.close:hover {
+    background-color: #0000FF;
+    color: white;
+}
+.forecast_container {
+    width: 100%;
+}

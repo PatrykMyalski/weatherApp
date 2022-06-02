@@ -14,7 +14,7 @@ const Meme = (props) => {
 
     return (
     <div className={classes.container}>
-        <button type="button"  className={classes.showWeather} onClick={props.onOpenClick}>Click for more weather information</button>
+        <button type="button" disabled={ctx.data === null} className={classes.showWeather} onClick={props.onOpenClick}>Click for more weather information</button>
         <div className={classes.meme}>
             <img src={meme} alt='frozed guy'></img>
         </div>
