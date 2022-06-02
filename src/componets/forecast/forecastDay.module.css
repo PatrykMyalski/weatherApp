@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    margin-bottom: 2rem;
+}
+.container h1 {
+    width: 100%;
+    text-align: center;
+}
+.data_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+.data_container div {
+    width: 100%;
+    text-align: center;
+}
