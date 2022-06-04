@@ -1,12 +1,18 @@
-.container {
+.container,
+.hourly,
+.hourly div {
     width: 100%;
-    padding-top: 2rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.btn {
+
+.container {
+    padding-top: 2rem;
+}
+
+.container button {
     all: unset;
     cursor: pointer;
     background-color: #809FFF;
@@ -15,10 +21,16 @@
     border-radius: 1rem;
     transition: 50ms;
 }
-.btn:hover {
+
+.container button:hover {
     background-color: #0000FF;
     color: white;
 }
+
 .hourly {
-    width: 100%;
+    margin-top: 2rem;
+}
+
+.hourly div {
+    margin: 2rem 0;
 }

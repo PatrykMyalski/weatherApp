@@ -1,0 +1,62 @@
+.hourly_forecast {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: auto;
+    width: 50rem;
+    background-color: white;
+    z-index: 10;
+    padding: 2rem;
+    border-radius: 4rem;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.container div {
+    margin: auto;
+}
+
+.hourly_forecast div img {
+    margin: auto;
+    width: 64px;
+}
+.hourly_forecast button {
+    all: unset;
+    cursor: pointer;
+    background-color: #809FFF;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 50ms;
+    margin-top: 2rem;
+}
+
+.hourly_forecast button:hover {
+    background-color: #0000FF;
+    color: white;
+}
+
+@media screen and (max-width: 880px) {
+    .hourly_forecast {
+        top: 10%;
+        font-size: 0.7rem;
+        width: 25rem;
+        border-radius: 3rem;
+    }
+    .hourly_forecast div img {
+        width: 32px;
+    }
+    .hourly_forecast button {
+        font-size: 0.7rem;
+        padding: 0.7rem;
+        border-radius: 0.7rem;
+    }
+    .container {
+        gap: 0.6rem;
+    }
+}
+
