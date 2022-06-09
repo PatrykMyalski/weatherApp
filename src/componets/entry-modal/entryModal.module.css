@@ -1,0 +1,64 @@
+.container {
+    background-color: white;
+    width: 30rem;
+    height: 20rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: 0 auto;
+    z-index: 10;
+    border-radius: 2rem;
+}
+
+
+.container div {
+    width: 100%;
+    text-align: center;
+
+}
+
+.container input {
+    all: unset;
+    margin-top: 20%;
+    border: 1px solid black;
+    text-align: start;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.container button {
+    all: unset;
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: #809FFF;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 50ms;
+}
+
+.container button:hover {
+    background-color: #0000FF;
+    color: white;
+}
+
+.invalid input{
+    background-color: rgb(250, 210, 210);
+    color: red;
+    border-color: red;
+}
+.invalid p {
+    color: red;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 20rem;
+        height: 15rem;
+    }
+    .container input, .container button {
+        font-size: 1rem;
+    }
+}

@@ -14,7 +14,6 @@ const Weather = (props) => {
         <div className={classes.container}>
             <div className={classes.btn_container}>
                 <button type='button' onClick={props.showHourly} className={classes.btn}>Hourly</button>
-                <button type='button' onClick={props.onHideClick} className={classes.btn}>Hide</button>
                 <button type='button' onClick={props.showForecast} className={classes.btn}>Forecast</button>
             </div>
             <div className={classes.baseInformation}>

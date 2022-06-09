@@ -8,9 +8,9 @@ const ModalOverlay = (props) => {
 
     let cards = props.data.map((item, index) => {
         if (index % 2 === 1) {
-            return <HourlyCard key={Math.random()} data={item} />
-        }
-    })
+            return <HourlyCard key={Math.random()} data={item} />;
+        };
+    });
     return (
         <div className={classes.hourly_forecast}>
             <div className={classes.container}>
@@ -18,8 +18,8 @@ const ModalOverlay = (props) => {
             </div>
             <button type='button' onClick={props.onClick}>Close</button>
         </div>
-    )
-}
+    );
+};
 
 
 const HourlyForecast = (props) => {
@@ -31,7 +31,7 @@ const HourlyForecast = (props) => {
             <ModalOverlay data={props.data} onClick={props.onClick} />,
             document.getElementById('modal-root'))}
         </React.Fragment>
-    )
+    );
 };
 
 export default HourlyForecast;

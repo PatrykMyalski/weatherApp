@@ -13,7 +13,7 @@ const HourlyCard = (props) => {
             <p>{`${data.pressure_mb}hPa`}</p>
             <h2>{data.time.slice(11)}</h2>
         </div>
-    )
+    );
 };
 
 export default HourlyCard;
