@@ -1,11 +1,12 @@
 import { useContext } from 'react';
-import classes from './weather.module.css'
+import classes from './weather.module.css';
 import WeatherContext from '../../data/weather-data-holder';
 
+// komponent wyświetla pogodę na obecną chwilę, pozwala na przejście do forecastu lub godzinowej pogody
 const Weather = (props) => {
 
-    const ctx = useContext(WeatherContext)
-    
+// pozyskiwany jest context
+    const ctx = useContext(WeatherContext);
     const current = ctx.data.current;
     const astro = ctx.data.forecast.forecastday[0].astro;
     

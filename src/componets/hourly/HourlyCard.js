@@ -1,5 +1,5 @@
 
-
+// komponent odpowiadający za wyświetlnienie pogody o danej godzinie
 const HourlyCard = (props) => {
 
     const data = props.data;

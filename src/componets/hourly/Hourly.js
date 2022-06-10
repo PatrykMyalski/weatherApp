@@ -5,9 +5,10 @@ import HourlyButton from './HourlyButton';
 import HourlyForecast from './HourlyForecast';
 
 
-
+// reducer obsługujący wyświetlanie się modali z forecastem godzinowym 
 const hourlyReducer = (state, action) => {
 
+// bierze action.type który określa który przycisk został aktywowany i który forecast ma być pokazany
     switch (action.type) {
         case "FIRST":
             return { firstHourly: !state.firstHourly, secondHourly: false, thirdHourly: false };
@@ -22,15 +23,18 @@ const hourlyReducer = (state, action) => {
 
 const Hourly = (props) => {
 
+// przywołujemy context
     const ctx = useContext(WeatherContext);
     const arrWithDays = ctx.data.forecast.forecastday;
 
+// definiowany jest useReducer 
     const [hourlyState, dispatchHourly] = useReducer(hourlyReducer, {
         firstHourly: false,
         secondHourly: false,
         thirdHourly: false
     });
 
+// button handlery którę dispatch'ują action z odpowiednim type'm po kliknięciu 
     const firstBtnHandler = () => {
         dispatchHourly({ type: "FIRST" });
     };

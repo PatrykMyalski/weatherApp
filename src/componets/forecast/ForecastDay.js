@@ -2,8 +2,10 @@ import classes from './forecastDay.module.css';
 
 const ForecastDay = (props) => {
 
+// aby skrócić syntax przypisujemy wartość z props do zmiennej 
     const day = props.data.day;
 
+// tworzymy komponent z watościamy zależnymi od props
     return (
         <div className={classes.container}>
             <h1>{props.data.date}</h1>

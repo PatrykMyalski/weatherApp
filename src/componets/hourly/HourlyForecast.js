@@ -6,6 +6,7 @@ import HourlyCard from "./HourlyCard";
 
 const ModalOverlay = (props) => {
 
+// mapujemy przez array z forecastem i umieszczamy na stronie tylko te nieparzyste
     let cards = props.data.map((item, index) => {
         if (index % 2 === 1) {
             return <HourlyCard key={Math.random()} data={item} />;
@@ -22,6 +23,7 @@ const ModalOverlay = (props) => {
 };
 
 
+// modal z portalem
 const HourlyForecast = (props) => {
 
     return (

@@ -6,8 +6,11 @@ import ForecastDay from "./ForecastDay";
 
 const Forecast = (props) => {
 
+// pobieramy Context 
     const ctx = useContext(WeatherContext);
 
+// każdy element w array z dniami odpowiada jednemu dniu, do każdej pozycji w arr jest tworzony komponent który w props ma wysyłane dane ze swojego dnia 
+// można również użyć map function
     return (
         <div className={classes.container}>
             <button type="button" onClick={props.onCloseForecast} className={classes.close}>Close</button>

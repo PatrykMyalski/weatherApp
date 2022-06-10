@@ -10,30 +10,31 @@ import WeatherContext from "./data/weather-data-holder";
 
 
 function App() {
+// state do przetrzymywania danych pogodowych otrzymanych przez child
   const [weatherData, setWeatherData] = useState(null);
+// state obsługujący czy ma się pokazać pogoda
   const [showWeather, setShowWeather] = useState(false);
+// state obsługujący czy ma się pokazać forecast
   const [showForecast, setShowForecast] = useState(false);
+// state obsługujący czy ma się pokazać przegląd godzinowy pogody
   const [showHourly, setShowHourly] = useState(false);
+// state obsługujący czy ma być pokazywany startowy modal
   const [showModal, setShowModal] = useState(true);
 
-
-  const weatherHandler = () => {
-    setShowWeather(!showWeather);
-  };
-
+// handlery obsługujące pokazywanie zmiane statów co ma być pokazywane userowi
   const forecastHandler = () => {
     setShowForecast(!showForecast);
   };
-
   const hourlyHandler = () => {
     setShowHourly(!showHourly);
   };
 
+// jeżeli dane zostały pozyskane updatujemy state na ich wartość
   const requestHandler = data => {
     setWeatherData(data);
   };
 
-  // useEffect który ma zamknąć modal gdy data będzie inna niż null tzn. wyszuka pogodę bez errorów
+  // useEffect który ma zamknąć modal gdy dane będą inne niż null tzn. wyszuka pogodę bez errorów
   useEffect(() => {
     if (weatherData !== null) {
       setShowModal(false);
@@ -41,14 +42,14 @@ function App() {
     };
   }, [weatherData])
 
-  
+// obsługiwane jest co ma zostać pokazne userowi
   let whatToShow = <div></div>;    // tutaj może być jakieś fajne background
   if (showForecast && !showHourly) {
     whatToShow = <Forecast onCloseForecast={forecastHandler} />;
   } else if (showHourly && !showForecast) {
     whatToShow = <Hourly onCloseHourly={hourlyHandler} />;
   } else if (showWeather) {
-    whatToShow = <Weather onHideClick={weatherHandler} showForecast={forecastHandler} showHourly={hourlyHandler} />;
+    whatToShow = <Weather showForecast={forecastHandler} showHourly={hourlyHandler} />;
   } else {
     whatToShow = <div></div>;
   };
