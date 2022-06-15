@@ -7,7 +7,7 @@ const HourlyCard = (props) => {
     return (
         <div>
             <img src={data.condition.icon} alt={data.condition.text}/>
-            <p>{`${data.temp_c}°C / ${data.feelslike_c}°C` }</p>
+            <p>{`${data.temp_c}°C` }</p>
             <p>{`${data.precip_mm}mm`}</p>
             <p>{`${data.wind_kph}kph`}</p>
             <p>{`${data.pressure_mb}hPa`}</p>

@@ -6,10 +6,11 @@ import EntryModal from "./componets/entry-modal/EntryModal";
 import classes from './app.module.css';
 import { useEffect, useState } from "react";
 import WeatherContext from "./data/weather-data-holder";
-
+import { backgroundManager } from "./assets/icons/background-manager/background-manager";
 
 
 function App() {
+
 // state do przetrzymywania danych pogodowych otrzymanych przez child
   const [weatherData, setWeatherData] = useState(null);
 // state obsługujący czy ma się pokazać pogoda
@@ -32,11 +33,14 @@ function App() {
 // jeżeli dane zostały pozyskane updatujemy state na ich wartość
   const requestHandler = data => {
     setWeatherData(data);
+    backgroundManager(data);
   };
 
   // useEffect który ma zamknąć modal gdy dane będą inne niż null tzn. wyszuka pogodę bez errorów
   useEffect(() => {
     if (weatherData !== null) {
+      setShowForecast(false);
+      setShowHourly(false);
       setShowModal(false);
       setShowWeather(true);   
     };
@@ -54,6 +58,7 @@ function App() {
     whatToShow = <div></div>;
   };
 
+  
   return (
     <WeatherContext.Provider value={{ data: weatherData }}>
       <div className={classes.main_container}>
