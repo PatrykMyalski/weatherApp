@@ -6,7 +6,7 @@ import EntryModal from "./componets/entry-modal/EntryModal";
 import classes from './app.module.css';
 import { useEffect, useState } from "react";
 import WeatherContext from "./data/weather-data-holder";
-import { backgroundManager } from "./assets/icons/background-manager/background-manager";
+import { backgroundManager } from "./assets/background-manager/background-manager";
 
 
 function App() {

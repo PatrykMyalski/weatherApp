@@ -9,12 +9,7 @@
     flex-wrap: wrap;
     
 }
-.logo {
-    font-size: 2rem;
-    width: 100%;
-    text-align: center;
-    
-}
+
 .container div {
     margin: 1rem 0;  
 }

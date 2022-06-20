@@ -31,6 +31,8 @@ const ModalOverlay = (props) => {
             setShowError(false);
             weatherCheck(city, dataProvider, modalErrorHandler); 
             setCity('');
+        } else if (city.length < 2) {
+            setShowError(true);
         };
     };
 

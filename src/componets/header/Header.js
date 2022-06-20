@@ -30,6 +30,8 @@ const Header = (props) => {
             setShowError(false);
             weathercheck(city, dataProvider, headerErrorHandler);
             setCity('');
+        } else if (city.length < 2) {
+            setShowError(true);
         };
     };
 
@@ -51,7 +53,6 @@ const Header = (props) => {
     return (
         <div className={classes.header}>
             <div className={classes.container}>
-                <div className={classes.logo}>Weather meme logo</div>
                 <div className={ifInvalid}>
                     <input className={classes.textInput}
                         type='text' placeholder='Search city'
